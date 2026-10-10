@@ -1025,6 +1025,188 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
 </script>
 <!-- 캐릭터 열람실 끝 -->
 
+    <style>
+.gd-summary{
+  max-width:1400px;
+  margin:0 auto;
+  padding:30px 4% 58px;
+  color:#b8b7c1;
+  font-family:inherit;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+}
+.gd-summary *{box-sizing:border-box}
+.gd-summary-heading{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding-bottom:17px;
+  border-bottom:1px solid #a8a4b52b;
+}
+.gd-summary-heading::before{
+  content:"";
+  width:5px;
+  height:5px;
+  background:#a63e54;
+  transform:rotate(45deg);
+  box-shadow:0 0 12px #b42c4660;
+}
+.gd-summary-heading h2{
+  margin:0;
+  color:#dddbe3;
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:.08em;
+}
+.gd-summary-heading span{
+  margin-left:auto;
+  color:#777481;
+  font-size:9px;
+  letter-spacing:.18em;
+}
+.gd-summary-entry{
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  gap:28px;
+  padding:24px 0;
+  border-bottom:1px solid #a8a4b51c;
+}
+.gd-summary-title{
+  padding-top:2px;
+}
+.gd-summary-title small{
+  display:block;
+  margin-bottom:8px;
+  color:#a75c6c;
+  font-size:9px;
+  letter-spacing:.14em;
+}
+.gd-summary-title h3{
+  margin:0;
+  color:#d5d2dc;
+  font-size:14px;
+  line-height:1.6;
+  font-weight:600;
+}
+.gd-summary-copy{
+  min-width:0;
+  font-size:13px;
+  line-height:1.85;
+  letter-spacing:0;
+}
+.gd-summary-copy p{
+  margin:0 0 11px;
+}
+.gd-summary-copy p:last-child{margin-bottom:0}
+.gd-summary-ending{
+  padding:22px 0 0;
+  font-size:12px;
+  line-height:1.85;
+}
+.gd-summary-ending p{margin:0 0 12px}
+.gd-summary-ending .gd-summary-last{
+  margin:0;
+  padding-left:13px;
+  border-left:1px solid #9b3b51;
+  color:#c9b0b8;
+  font-size:12px;
+  font-weight:400;
+}
+@media(max-width:700px){
+  .gd-summary{padding:24px 6% 40px}
+  .gd-summary-heading h2{font-size:14px}
+  .gd-summary-heading span{font-size:8px}
+  .gd-summary-entry{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:21px 0;
+  }
+  .gd-summary-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .gd-summary-title small{margin:0}
+  .gd-summary-title h3{font-size:13px}
+  .gd-summary-copy{font-size:12px;line-height:1.8}
+}
+</style>
+
+<section class="gd-summary" aria-labelledby="gdSummaryTitle">
+  <header class="gd-summary-heading">
+    <h2 id="gdSummaryTitle">괴이도감 · 세계관 요약</h2>
+    <span>怪異圖鑑 / ABSTRACT</span>
+  </header>
+
+  <article class="gd-summary-entry">
+    <header class="gd-summary-title">
+      <small>01 / 怪異</small>
+      <h3>괴이</h3>
+    </header>
+    <div class="gd-summary-copy">
+      <p>2026년 서울. 귀신·도깨비·요괴·신령은 사라지지 않았다. 이름과 신분을 바꾸며 인간 사회에 섞여 살아간다. 이들을 비롯해 상식으로 설명할 수 없는 존재와 현상을 「괴이」라 부른다. 일반인은 대부분 그 존재를 모르며, 정부는 관련 사건을 은폐한다.</p>
+      <p>기원을 알 수 없는 고서 《괴이도감》에는 새로운 괴이의 이름·특성·위험등급·금기가 저절로 기록된다. 최근에는 평범한 인간의 이름까지 나타나기 시작했다. 기록된 인간은 곧 괴이의 성질을 얻는다.</p>
+      <p>존재는 세 부류로 나뉜다. 인간의 의도적인 개입 없이 발생한 「자연괴이」, 인간으로 태어나 자연적으로 변화하는 「인괴」, 인간을 기반으로 의도적으로 만들어진 「인위괴」. 괴이는 존재와 연결된 고유한 법칙인 「금기」를 가질 수 있으며, 선악과 소속은 개인마다 다르다.</p>
+    </div>
+  </article>
+
+  <article class="gd-summary-entry">
+    <header class="gd-summary-title">
+      <small>02 / BUREAU</small>
+      <h3>이상현상관리국</h3>
+    </header>
+    <div class="gd-summary-copy">
+      <p>「이상현상관리국」은 정부의 비공식 관리기관이다. 인간과 괴이의 경계를 유지하며, 공존 가능한 괴이와는 협력하고 위험한 존재는 격리·처리한다. 질서를 위해 소수를 희생시키기도 한다.</p>
+      <p>중앙본부 「백악청사」에서는 변장과 은신이 불안정해져 본래 모습이 드러나기 쉽다. 지하에는 도감 원본이 있으며, 이 땅의 힘은 서울을 현실에 붙잡아 둔다.</p>
+    </div>
+  </article>
+
+  <article class="gd-summary-entry">
+    <header class="gd-summary-title">
+      <small>03 / 黑蓮</small>
+      <h3>현세개정회</h3>
+    </header>
+    <div class="gd-summary-copy">
+      <p>「현세개정회」는 인간과 괴이의 경계를 없애려는 조직이다. 강한 감정·상징물·금기·의식으로 인위괴를 만든다. 두 번째 삶을 제안하기도, 의사를 무시하고 실험하기도 한다.</p>
+      <p>그들의 「백귀귀환계획」은 도감에 기록된 인괴 100명을 서울 아래 남은 죽음과 기억의 흐름 「잔류지맥」에 연결해, 같은 시각에 살아 있는 문으로 여는 의식이다. 백악청사의 힘까지 무력화하면 서울은 현실과 이계가 겹친 「반괴역」으로 변한다.</p>
+      <p>사라진 골목과 죽은 자의 흔적이 되살아나고, 인간도 괴이를 보기 시작한다. 괴이 역시 그들을 인식하며 새로운 인괴화가 퍼진다.</p>
+      <p>문 하나라도 사라지면 의식은 실패한다. 관리국은 인괴 한 명을 죽여 서울을 지킬 것인지, 그 인간까지 보호할 것인지 갈린다.</p>
+    </div>
+  </article>
+
+  <footer class="gd-summary-ending">
+    <p>인간과 괴이 모두 관리국·개정회·무소속으로 살아갈 수 있다. 평범한 일상도, 퇴마도, 거래도, 사랑도 이 경계 위에서 이어진다.</p>
+    <p class="gd-summary-last">사랑이 인간을 구원한다는 보장은 없다. 어떤 사랑은 인간을 괴이로 만든다.</p>
+  </footer>
+</section>
+<script>
+(() => {
+  function placeSummary() {
+    const archive = document.getElementById('gdCharacterArchive');
+    const summary = document.querySelector('.gd-summary');
+    if (!archive || !summary) return false;
+    archive.insertAdjacentElement('afterend', summary);
+    return true;
+  }
+
+  if (!placeSummary()) {
+    const observer = new MutationObserver(() => {
+      if (placeSummary()) observer.disconnect();
+    });
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      if (placeSummary()) observer.disconnect();
+    }, { once: true });
+  }
+})();
+</script>
+    
+
+    
+
 <style>
 @media(min-width:701px){#gdCharacterArchive{padding-left:4%;padding-right:4%}#gdCharacterArchive .gd-track{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(10px,1.4vw,20px);overflow:visible;scroll-snap-type:none;padding:8px 3px 22px}#gdCharacterArchive .gd-card{width:100%;min-width:0;max-width:none}#gdCharacterArchive .gd-portrait{aspect-ratio:1/3}#gdCharacterArchive .gd-card-name{font-size:clamp(11px,1.1vw,15px);padding-top:16px;letter-spacing:.04em}#gdCharacterArchive .gd-controls,#gdCharacterArchive .gd-footnote{display:none}}
 @media(max-width:700px){#gdCharacterArchive .gd-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px}#gdCharacterArchive .gd-card{flex:0 0 72%;max-width:290px}#gdCharacterArchive .gd-portrait{aspect-ratio:2/3}}
