@@ -1026,186 +1026,203 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
 <!-- 캐릭터 열람실 끝 -->
 
     <style>
-.gd-summary{
-  max-width:1400px;
-  margin:0 auto;
-  padding:30px 4% 58px;
-  color:#b8b7c1;
-  font-family:inherit;
-  word-break:keep-all;
-  overflow-wrap:anywhere;
+#gdWorldBrief{
+  max-width:1400px;margin:0 auto;padding:30px 4% 50px;
+  color:#b9b7c2;font-family:inherit;word-break:keep-all;
+  overflow-wrap:anywhere;text-align:left;
 }
-.gd-summary *{box-sizing:border-box}
-.gd-summary-heading{
-  display:flex;
-  align-items:center;
-  gap:13px;
-  padding-bottom:17px;
-  border-bottom:1px solid #a8a4b52b;
+#gdWorldBrief *{box-sizing:border-box}
+#gdWorldBrief .gwb-head{
+  display:flex;align-items:center;gap:12px;
+  padding-bottom:17px;border-bottom:1px solid #a8a4b52b;
 }
-.gd-summary-heading::before{
-  content:"";
-  width:5px;
-  height:5px;
-  background:#a63e54;
-  transform:rotate(45deg);
-  box-shadow:0 0 12px #b42c4660;
+#gdWorldBrief .gwb-head::before{
+  content:"";width:5px;height:5px;background:#a63e54;
+  transform:rotate(45deg);box-shadow:0 0 12px #b42c4660;
 }
-.gd-summary-heading h2{
-  margin:0;
-  color:#dddbe3;
-  font-size:15px;
-  font-weight:600;
-  letter-spacing:.08em;
+#gdWorldBrief .gwb-head h2{
+  margin:0;color:#dddbe3;font-size:15px;
+  font-weight:600;letter-spacing:.06em;
 }
-.gd-summary-heading span{
-  margin-left:auto;
-  color:#777481;
-  font-size:9px;
-  letter-spacing:.18em;
+#gdWorldBrief .gwb-head span{
+  margin-left:auto;color:#797581;font-size:9px;
+  letter-spacing:.15em;
 }
-.gd-summary-entry{
-  display:grid;
-  grid-template-columns:150px minmax(0,1fr);
-  gap:28px;
-  padding:24px 0;
-  border-bottom:1px solid #a8a4b51c;
+#gdWorldBrief .gwb-genre{
+  margin:12px 0 0;color:#8d8896;font-size:10px;line-height:1.7;
 }
-.gd-summary-title{
-  padding-top:2px;
+#gdWorldBrief .gwb-intro{
+  margin:16px 0 5px;padding-left:13px;
+  border-left:1px solid #934054;color:#c9b8c0;
+  font-size:13px;line-height:1.8;font-weight:400;
 }
-.gd-summary-title small{
-  display:block;
-  margin-bottom:8px;
-  color:#a75c6c;
-  font-size:9px;
-  letter-spacing:.14em;
+#gdWorldBrief .gwb-entry{
+  display:grid;grid-template-columns:150px minmax(0,1fr);
+  gap:28px;padding:23px 0;border-bottom:1px solid #a8a4b51c;
 }
-.gd-summary-title h3{
-  margin:0;
-  color:#d5d2dc;
-  font-size:14px;
-  line-height:1.6;
-  font-weight:600;
+#gdWorldBrief .gwb-title small{
+  display:block;margin-bottom:7px;color:#a75c6c;
+  font-size:9px;letter-spacing:.14em;
 }
-.gd-summary-copy{
-  min-width:0;
-  font-size:13px;
-  line-height:1.85;
-  letter-spacing:0;
+#gdWorldBrief .gwb-title h3{
+  margin:0;color:#d5d2dc;font-size:14px;
+  line-height:1.6;font-weight:600;
 }
-.gd-summary-copy p{
-  margin:0 0 11px;
+#gdWorldBrief .gwb-title p{
+  margin:7px 0 0;color:#827d8c;font-size:10px;line-height:1.7;
 }
-.gd-summary-copy p:last-child{margin-bottom:0}
-.gd-summary-ending{
-  padding:22px 0 0;
-  font-size:12px;
-  line-height:1.85;
+#gdWorldBrief .gwb-copy{
+  min-width:0;font-size:13px;line-height:1.85;letter-spacing:0;
 }
-.gd-summary-ending p{margin:0 0 12px}
-.gd-summary-ending .gd-summary-last{
-  margin:0;
-  padding-left:13px;
-  border-left:1px solid #9b3b51;
-  color:#c9b0b8;
-  font-size:12px;
-  font-weight:400;
+#gdWorldBrief .gwb-copy p{margin:0 0 11px}
+#gdWorldBrief .gwb-copy p:last-child{margin-bottom:0}
+#gdWorldBrief .gwb-notice{
+  padding:12px 15px;border-left:1px solid #a84b61;
+  background:linear-gradient(90deg,#8f294514,transparent);
+  color:#d2bdc5;
+}
+#gdWorldBrief .gwb-end{
+  margin:20px 0 0;padding-left:13px;border-left:1px solid #934054;
+  color:#c9b0b8;font-size:12px;line-height:1.85;font-weight:400;
 }
 @media(max-width:700px){
-  .gd-summary{padding:24px 6% 40px}
-  .gd-summary-heading h2{font-size:14px}
-  .gd-summary-heading span{font-size:8px}
-  .gd-summary-entry{
-    grid-template-columns:1fr;
-    gap:12px;
-    padding:21px 0;
-  }
-  .gd-summary-title{
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .gd-summary-title small{margin:0}
-  .gd-summary-title h3{font-size:13px}
-  .gd-summary-copy{font-size:12px;line-height:1.8}
+  #gdWorldBrief{padding:24px 6% 38px}
+  #gdWorldBrief .gwb-head h2{font-size:14px}
+  #gdWorldBrief .gwb-head span{font-size:8px}
+  #gdWorldBrief .gwb-entry{grid-template-columns:1fr;gap:12px;padding:20px 0}
+  #gdWorldBrief .gwb-title small{margin-bottom:5px}
+  #gdWorldBrief .gwb-title h3{font-size:13px}
+  #gdWorldBrief .gwb-title p{margin-top:4px}
+  #gdWorldBrief .gwb-copy{font-size:12px;line-height:1.8}
+  #gdWorldBrief .gwb-intro{font-size:12px}
 }
 </style>
 
-<section class="gd-summary" aria-labelledby="gdSummaryTitle">
-  <header class="gd-summary-heading">
-    <h2 id="gdSummaryTitle">괴이도감 · 세계관 요약</h2>
+<section id="gdWorldBrief" aria-labelledby="gdWorldBriefTitle">
+  <header class="gwb-head">
+    <h2 id="gdWorldBriefTitle">괴이도감 · 세계관 요약</h2>
     <span>怪異圖鑑 / ABSTRACT</span>
   </header>
+  <p class="gwb-genre">현대 동양판타지 · 오컬트 · 미스터리 · 로맨스</p>
+  <blockquote class="gwb-intro">귀신도, 도깨비도, 신령도 사라지지 않았다.<br>다만 인간처럼 사는 법을 배웠을 뿐이다.</blockquote>
 
-  <article class="gd-summary-entry">
-    <header class="gd-summary-title">
+  <article class="gwb-entry">
+    <header class="gwb-title">
       <small>01 / 怪異</small>
       <h3>괴이</h3>
+      <p>인간 사회에 섞여 살아가는 존재들</p>
     </header>
-    <div class="gd-summary-copy">
-      <p>2026년 서울. 귀신·도깨비·요괴·신령은 사라지지 않았다. 이름과 신분을 바꾸며 인간 사회에 섞여 살아간다. 이들을 비롯해 상식으로 설명할 수 없는 존재와 현상을 「괴이」라 부른다. 일반인은 대부분 그 존재를 모르며, 정부는 관련 사건을 은폐한다.</p>
-      <p>기원을 알 수 없는 고서 《괴이도감》에는 새로운 괴이의 이름·특성·위험등급·금기가 저절로 기록된다. 최근에는 평범한 인간의 이름까지 나타나기 시작했다. 기록된 인간은 곧 괴이의 성질을 얻는다.</p>
-      <p>존재는 세 부류로 나뉜다. 인간의 의도적인 개입 없이 발생한 「자연괴이」, 인간으로 태어나 자연적으로 변화하는 「인괴」, 인간을 기반으로 의도적으로 만들어진 「인위괴」. 괴이는 존재와 연결된 고유한 법칙인 「금기」를 가질 수 있으며, 선악과 소속은 개인마다 다르다.</p>
+    <div class="gwb-copy">
+      <p>2026년 대한민국, 서울을 중심으로 펼쳐지는 세계. 귀신·도깨비·요괴·신령은 사라지지 않았다. 도깨비는 인간의 신분으로 직장을 다니고, 오래된 요괴는 이름을 바꾸며 살아간다. 터를 잃은 신령은 도시로 내려왔고, 떠나지 못한 귀신은 산 사람들 사이를 배회한다. 대부분의 일반인은 이들의 정체를 모르며, 정부는 관련 사건을 은폐한다.</p>
+      <p>인간의 상식으로 설명할 수 없는 존재와 현상을 통틀어 「괴이」라 부른다. 괴이라는 이유만으로 선하거나 악한 것은 아니다. 인간을 지키는 존재도, 인간을 이용하거나 먹이로 보는 존재도, 조용히 살아가기를 원하는 존재도 있다. 인간 역시 반드시 선한 것은 아니다.</p>
+      <p>존재는 인간의 의도적인 개입 없이 발생한 「자연괴이」, 인간으로 태어나 자연적으로 괴이의 성질을 얻는 「인괴」, 인간을 기반으로 의도적으로 만들어진 「인위괴」로 나뉜다. 괴이는 자신의 존재와 연결된 고유한 법칙 「금기」를 가질 수 있다.</p>
     </div>
   </article>
 
-  <article class="gd-summary-entry">
-    <header class="gd-summary-title">
-      <small>02 / BUREAU</small>
+  <article class="gwb-entry">
+    <header class="gwb-title">
+      <small>02 / 人怪</small>
+      <h3>괴이도감과 인괴</h3>
+      <p>최근 나타나기 시작한 새로운 기록</p>
+    </header>
+    <div class="gwb-copy">
+      <p>《괴이도감》은 새로운 존재가 나타나면 스스로 페이지를 만들어 기록하는 정체불명의 고서다. 기록에는 번호·분류·위험등급·특이사항·금기 등이 적힌다.</p>
+      <p class="gwb-notice">최근, 평범한 인간의 이름까지 도감에 기록되기 시작했다. 관리국은 이들을 임시로 「인괴」라 부른다. 기록된 사람 주변에서는 설명할 수 없는 사건이 발생하고, 괴이의 성질이 나타나기 시작한다.</p>
+      <p>괴이와 인괴는 같은 도감에 기록된다. 그러나 인괴로 기록되었다고 해서 모두 이미 괴이가 된 것은 아니다. 도감은 존재를 기록하는 것인지, 앞으로 괴이가 될 존재를 예고하는 것인지 아직 밝혀지지 않았다.</p>
+    </div>
+  </article>
+
+  <article class="gwb-entry">
+    <header class="gwb-title">
+      <small>03 / BUREAU</small>
       <h3>이상현상관리국</h3>
+      <p>숨겨진 세계를 관리하는 자들</p>
     </header>
-    <div class="gd-summary-copy">
-      <p>「이상현상관리국」은 정부의 비공식 관리기관이다. 인간과 괴이의 경계를 유지하며, 공존 가능한 괴이와는 협력하고 위험한 존재는 격리·처리한다. 질서를 위해 소수를 희생시키기도 한다.</p>
-      <p>중앙본부 「백악청사」에서는 변장과 은신이 불안정해져 본래 모습이 드러나기 쉽다. 지하에는 도감 원본이 있으며, 이 땅의 힘은 서울을 현실에 붙잡아 둔다.</p>
+    <div class="gwb-copy">
+      <p>정부는 공식적으로 괴이의 존재를 부정하지만, 내부에는 비공식 기관 「이상현상관리국」이 존재한다. 관리국은 괴이를 조사하고 기록하며, 관련 사건을 사고·범죄·실종·재난 등으로 위장해 일반 사회에 알려지지 않도록 처리한다.</p>
+      <p>괴이를 무조건 제거하는 기관은 아니다. 인간과 공존하는 괴이와는 등록·관찰·협력 관계를 맺으며, 관리국에 소속된 괴이도 존재한다. 위험한 존재는 봉인하거나 격리·처리한다. 목표는 사회의 안전과 질서지만, 보호를 위한 관리가 지나친 통제로 이어지거나 다수를 위해 소수를 희생시키기도 한다.</p>
+      <p>중앙본부 「백악청사」에서는 변장과 은신이 불안정해져 본래 모습이 드러나기 쉽다. 지하에는 도감 원본이 보관되어 있으며, 이 땅의 힘은 서울을 현실에 붙잡아 두는 닻 역할을 한다.</p>
     </div>
   </article>
 
-  <article class="gd-summary-entry">
-    <header class="gd-summary-title">
-      <small>03 / 黑蓮</small>
+  <article class="gwb-entry">
+    <header class="gwb-title">
+      <small>04 / 黑蓮</small>
       <h3>현세개정회</h3>
+      <p>숨겨진 세계를 깨우려는 자들</p>
     </header>
-    <div class="gd-summary-copy">
-      <p>「현세개정회」는 인간과 괴이의 경계를 없애려는 조직이다. 강한 감정·상징물·금기·의식으로 인위괴를 만든다. 두 번째 삶을 제안하기도, 의사를 무시하고 실험하기도 한다.</p>
-      <p>그들의 「백귀귀환계획」은 도감에 기록된 인괴 100명을 서울 아래 남은 죽음과 기억의 흐름 「잔류지맥」에 연결해, 같은 시각에 살아 있는 문으로 여는 의식이다. 백악청사의 힘까지 무력화하면 서울은 현실과 이계가 겹친 「반괴역」으로 변한다.</p>
-      <p>사라진 골목과 죽은 자의 흔적이 되살아나고, 인간도 괴이를 보기 시작한다. 괴이 역시 그들을 인식하며 새로운 인괴화가 퍼진다.</p>
+    <div class="gwb-copy">
+      <p>「현세개정회」는 인간과 괴이의 경계를 없애려는 비밀조직이다. 겉으로는 재단과 연구기관 등으로 활동하지만, 뒤에서는 유물과 의식, 인간의 감정과 욕망을 이용해 괴이를 만들어 낸다. 인위괴를 만드는 기본식은 「강한 감정 + 상징물 + 금기 + 의식」이다.</p>
+      <p>또한 인괴를 찾아내 괴이화를 유도하며, 관리국의 은폐를 거짓된 질서라고 주장한다. 명분은 해방과 변화다. 죽어가는 인간에게 두 번째 삶을 제안하기도 하지만, 당사자의 의사를 무시하고 인간과 괴이를 실험 대상이나 자원으로 이용하기도 한다.</p>
+      <p>관리국의 통제에 반대하거나 개정회의 사상에 동조해 협력하는 괴이도 있다. 반대로 강제적인 괴이화와 실험을 혐오하는 괴이도 존재한다.</p>
+    </div>
+  </article>
+
+  <article class="gwb-entry">
+    <header class="gwb-title">
+      <small>05 / INDEPENDENT</small>
+      <h3>독립 세력</h3>
+      <p>어느 쪽에도 속하지 않는 자들</p>
+    </header>
+    <div class="gwb-copy">
+      <p>무당·퇴마사·괴이 전문 해결사·민속학자, 독립적으로 살아가는 괴이들도 존재한다. 이들은 하나의 조직이 아니라, 각자의 신념과 사정에 따라 움직이는 존재들이다.</p>
+      <p>관리국에 협력하거나 개정회와 거래할 수도 있고, 두 세력을 모두 피하거나 적대할 수도 있다. 평범한 인간을 보호하는 이도, 자신의 터와 금기를 지키려는 이도 있다. 인간과 괴이 모두 소속을 선택할 수 있으며, 사건을 계기로 입장이 바뀌기도 한다.</p>
+    </div>
+  </article>
+
+  <article class="gwb-entry">
+    <header class="gwb-title">
+      <small>06 / 百鬼歸還</small>
+      <h3>백귀귀환계획</h3>
+      <p>서울의 경계가 무너지는 밤</p>
+    </header>
+    <div class="gwb-copy">
+      <p>현세개정회는 도감에 기록된 인괴 100명을 서울 아래 남은 죽음과 기억의 흐름 「잔류지맥」에 연결하고, 같은 시각에 이름을 활성화해 「살아 있는 문」으로 열려 한다.</p>
+      <p>백악청사의 힘까지 무력화하면 서울은 현실과 이계가 겹친 「반괴역」으로 변한다. 사라진 골목과 죽은 자의 흔적이 되살아나고, 인간도 괴이를 보기 시작한다. 괴이 역시 그들을 인식하며, 새로운 인괴화가 퍼진다.</p>
       <p>문 하나라도 사라지면 의식은 실패한다. 관리국은 인괴 한 명을 죽여 서울을 지킬 것인지, 그 인간까지 보호할 것인지 갈린다.</p>
     </div>
   </article>
 
-  <footer class="gd-summary-ending">
-    <p>인간과 괴이 모두 관리국·개정회·무소속으로 살아갈 수 있다. 평범한 일상도, 퇴마도, 거래도, 사랑도 이 경계 위에서 이어진다.</p>
-    <p class="gd-summary-last">사랑이 인간을 구원한다는 보장은 없다. 어떤 사랑은 인간을 괴이로 만든다.</p>
-  </footer>
+  <article class="gwb-entry">
+    <header class="gwb-title">
+      <small>07 / BETWEEN</small>
+      <h3>경계 위의 일상</h3>
+    </header>
+    <div class="gwb-copy">
+      <p>인간과 괴이 모두 관리국·개정회·무소속으로 살아갈 수 있다. 평범한 일상도, 퇴마도, 거래도, 사랑도 이 경계 위에서 이어진다.</p>
+    </div>
+  </article>
+
+  <p class="gwb-end">사랑이 인간을 구원한다는 보장은 없다. 어떤 사랑은 인간을 괴이로 만든다.</p>
 </section>
+
 <script>
 (() => {
-  function placeSummary() {
+  let observer;
+
+  function placeWorldBrief() {
     const archive = document.getElementById('gdCharacterArchive');
-    const summary = document.querySelector('.gd-summary');
-    if (!archive || !summary) return false;
-    archive.insertAdjacentElement('afterend', summary);
+    const brief = document.getElementById('gdWorldBrief');
+    if (!archive || !brief) return false;
+
+    document.querySelectorAll('.gd-summary').forEach(old => old.remove());
+    archive.insertAdjacentElement('afterend', brief);
+    if (observer) observer.disconnect();
     return true;
   }
 
-  if (!placeSummary()) {
-    const observer = new MutationObserver(() => {
-      if (placeSummary()) observer.disconnect();
-    });
+  if (!placeWorldBrief()) {
+    observer = new MutationObserver(placeWorldBrief);
     observer.observe(document.documentElement, {
       childList: true,
       subtree: true
     });
-    document.addEventListener('DOMContentLoaded', () => {
-      if (placeSummary()) observer.disconnect();
-    }, { once: true });
+    document.addEventListener('DOMContentLoaded', placeWorldBrief, {
+      once: true
+    });
   }
 })();
-</script>
-    
-
-    
+</script> 
 
 <style>
 @media(min-width:701px){#gdCharacterArchive{padding-left:4%;padding-right:4%}#gdCharacterArchive .gd-track{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(10px,1.4vw,20px);overflow:visible;scroll-snap-type:none;padding:8px 3px 22px}#gdCharacterArchive .gd-card{width:100%;min-width:0;max-width:none}#gdCharacterArchive .gd-portrait{aspect-ratio:1/3}#gdCharacterArchive .gd-card-name{font-size:clamp(11px,1.1vw,15px);padding-top:16px;letter-spacing:.04em}#gdCharacterArchive .gd-controls,#gdCharacterArchive .gd-footnote{display:none}}
