@@ -964,8 +964,7 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
   track.querySelectorAll('.gd-card').forEach(card => {
     const character = characters.find(item => item.name === card.dataset.character);
     if (!character) return;
-    const image = card.querySelector('img');
-    if (image) image.addEventListener('error', () => image.replaceWith(emptyPortrait()), { once: true });
+    card.querySelector('.gd-portrait').replaceChildren(portrait(character, true));
     card.addEventListener('click', () => openRecord(character, card));
   });
 
