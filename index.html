@@ -333,4 +333,40 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
  for(const folio of document.querySelectorAll('.article-cinematic')){folio.addEventListener('pointerenter',()=>{if(effects)folio.classList.add('folio-awake')});folio.addEventListener('pointerleave',()=>folio.classList.remove('folio-awake'));}
  for(const visual of document.querySelectorAll('.visual-scene'))visual.addEventListener('click',e=>{if(!effects||reduced)return;const r=visual.getBoundingClientRect();const ring=document.createElement('i');ring.className='sigil-click';ring.setAttribute('aria-hidden','true');ring.style.left=e.clientX-r.left+'px';ring.style.top=e.clientY-r.top+'px';visual.appendChild(ring);setTimeout(()=>ring.remove(),1250)});
 })();
-</script></body></html>
+</script>
+<!-- 배경음악 -->
+<audio id="bookBgm" src="./bgm.mp3" loop preload="none"></audio>
+
+<button id="bgmToggle" type="button" aria-pressed="false"
+  style="position:fixed;bottom:22px;left:20px;z-index:9999;
+  padding:10px 16px;border:1px solid #62565a;border-radius:3px;
+  background:rgba(10,10,14,.92);color:#d8d5da;
+  font:600 12px Arial,sans-serif;letter-spacing:.08em;
+  cursor:pointer;box-shadow:0 0 18px rgba(130,20,40,.18);">
+  ♫ 배경음 켜기
+</button>
+
+<script>
+(() => {
+  const audio = document.getElementById('bookBgm');
+  const button = document.getElementById('bgmToggle');
+  audio.volume = 0.3;
+
+  button.addEventListener('click', async () => {
+    if (audio.paused) {
+      try {
+        await audio.play();
+        button.textContent = '♫ 배경음 끄기';
+        button.setAttribute('aria-pressed', 'true');
+      } catch {
+        button.textContent = '♫ 재생 다시 시도';
+      }
+    } else {
+      audio.pause();
+      button.textContent = '♫ 배경음 켜기';
+      button.setAttribute('aria-pressed', 'false');
+    }
+  });
+})();
+</script>
+</body></html>
