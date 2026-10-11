@@ -237,7 +237,7 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
       position: '52% 35%',
       tags: ['여유로운', '느긋한 오만', '집요함', '제멋대로인 애정'],
       quote: '…그건 안 돼. 다른 건 네가 원하는 대로 해. 내 곁을 떠나는 건 허락 못 해.',
-      description: '여유로운 태도와 능글맞은 말로 거리를 좁히는 이무기. 인간의 이름은 이현조, 괴이의 이름은 이겸.'
+      description: '여유로운 태도와 능글맞은 말로 거리를 좁히는 이무기, 이겸.'
     },
     {
       name: '흑랑',
@@ -257,7 +257,7 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
       position: '50% 35%',
       tags: ['자연괴이', '계략남', '터주신', '시후회남', '인귀식'],
       quote: '자기야, 그렇게 노려보지 마. 나 원래 뻔뻔한 놈인 거 알잖아. ……그래도 네가 아픈 건 못 보겠더라.',
-      description: '서울 성북구 장위동 장위뉴타운 재개발구역 내 오래된 당산나무 일대 출몰.'
+      description: '사랑마저 계산에 넣었던 교활한 남자가 이제 연인을 지키기 위해 신의 자리를 버리려 한다.'
     },
     {
       name: '무영',
@@ -267,7 +267,6 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
       tags: ['그림자능력', '과묵남', '절제남', '경계관리자', '인간성의 경계'],
       quote: '과연, 네가 끝까지 날 기억할 수 있을까.',
       description: '현세개정회 이면공간 설계자.'
-        
     },
     {
       name: '서이재',
@@ -287,7 +286,7 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
       position: '50% 28%',
       tags: ['파계무당', '능글남', '능력남', '연상남', '자기희생남', '퇴마사'],
       quote: '세 번까지 부를 필요 없어요. 당신이 부르면, 난 첫 번째에 갈 테니까.',
-      description: '이상현상관리국 대응본부 특수대응과.'
+      description: '별명이 파계무당이지만 사실 파계무당은 아니다.'
     }
   ];const list=document.getElementById('cards'),dialog=document.getElementById('profile'),close=dialog.querySelector('.gd-profile-close');let origin=null;characters.forEach((person,index)=>{const card=document.createElement('button');card.type='button';card.className='card';card.dataset.profile=String(index);card.setAttribute('aria-haspopup','dialog');card.setAttribute('aria-label',person.name+' 상세 기록 열기');const portrait=document.createElement('span');portrait.className='portrait';const image=document.createElement('img');image.src=person.image;image.alt=person.name;image.style.objectPosition=person.position||'50% 35%';const label=document.createElement('span');label.className='label';label.textContent=person.alias;portrait.append(image,label);const name=document.createElement('span');name.className='name';name.textContent=person.name;const top=document.createElement('span');top.className='card-top';top.textContent='怪異圖鑑 · '+String(index+1).padStart(2,'0');const foot=document.createElement('span');foot.className='card-foot';foot.textContent='✦';card.append(top,portrait,name,foot);card.addEventListener('click',()=>{origin=card;document.getElementById('profileNumber').textContent='NO. '+String(index+1).padStart(3,'0');const record=characters[Number(card.dataset.profile)];document.getElementById('profileImage').src=record.image;document.getElementById('profileImage').alt=record.name+' 원본';for(const [id,key] of [['faction','faction'],['quote','quote'],['profileName','name'],['alias','alias'],['description','description']])document.getElementById(id).textContent=record[key];document.getElementById('tags').replaceChildren(...record.tags.map(tag=>{const span=document.createElement('span');span.textContent='#'+tag;return span}));dialog.showModal();dialog.scrollTop=0;document.body.classList.add('profile-open');close.focus({preventScroll:true})});list.append(card)});function closeProfile(){if(dialog.open)dialog.close()}close.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();closeProfile()});function outside(e){const r=dialog.getBoundingClientRect();return e.target===dialog&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)}dialog.addEventListener('click',e=>{if(outside(e))closeProfile()});dialog.addEventListener('cancel',e=>{e.preventDefault();dialog.close()});dialog.addEventListener('close',()=>{document.body.classList.remove('profile-open');if(origin)origin.focus({preventScroll:true})});})();</script>
 <nav class="index" aria-label="세계관 목차"><div class="index-label">CONTENTS ── 目次</div><div class="index-grid"><a href="#world"><span>Ⅰ <span class="english">· WORLD</span></span><b>중심 세계관</b></a><a href="#bureau"><span>Ⅱ <span class="english">· BUREAU</span></span><b>이상현상관리국</b></a><a href="#lotus"><span>Ⅲ <span class="english">· BLACK LOTUS</span></span><b>현세개정회</b></a><a href="#beings"><span>Ⅳ <span class="english">· THE ANOMALOUS</span></span><b>괴이</b></a></div></nav>
