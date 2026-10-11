@@ -1159,57 +1159,30 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
 @media(max-width:700px){#gdCharacterArchive .gd-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px}#gdCharacterArchive .gd-card{flex:0 0 72%;max-width:290px}#gdCharacterArchive .gd-portrait{aspect-ratio:2/3}}
 </style>
 
+
     <style>
-#profile {
-  --paper: #e2d3b6;
-  --ink: #342823;
-  --title-ink: #261d19;
-  --quote-ink: #713047;
-  --muted-ink: #65513f;
-  --rule: #89674a;
-}
-@media (prefers-color-scheme: dark) {
-  #profile {
-    --paper: #241c20;
-    --ink: #e5d6c3;
-    --title-ink: #f5e7d0;
-    --quote-ink: #f0afbd;
-    --muted-ink: #c6b29a;
-    --rule: #9b7965;
-  }
-}
 #profile .copy {
-  background:
-    repeating-linear-gradient(
-      0deg, transparent 0 3px,
-      rgba(128,100,65,.035) 3px 4px
-    ),
-    var(--paper) !important;
-  color: var(--ink) !important;
+  color: #36282a !important;
 }
 #profile blockquote,
 #profile #quote {
-  color: var(--quote-ink) !important;
-  border-left-color: var(--quote-ink) !important;
+  color: #713047 !important;
+  border-left-color: #903b50 !important;
 }
 #profile h2 {
-  color: var(--title-ink) !important;
-}
-#profile .description {
-  color: var(--ink) !important;
+  color: #2b2025 !important;
 }
 #profile .alias,
 #profile .profile-folio {
-  color: var(--muted-ink) !important;
+  color: #65513f !important;
 }
 #profile .faction,
 #profile .tags,
 #profile .tags span {
-  color: var(--quote-ink) !important;
+  color: #713c4b !important;
 }
-#profile .tags span,
-#profile .profile-folio {
-  border-color: var(--rule) !important;
+#profile .description {
+  color: #40312c !important;
 }
 </style>
 
