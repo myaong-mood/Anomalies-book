@@ -1123,11 +1123,37 @@ body.fx-paused *,body.fx-paused *:before,body.fx-paused *:after{animation-play-s
   }
 })();
 </script> 
+
+
+
+    
 <style>
 #gdCharacterArchive .portrait > .label {
   display: none !important;
 }
+#gdCharacterArchive .card-alias {
+  display: block;
+  margin-top: 5px;
+  color: #b49a87;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .12em;
+  line-height: 1.5;
+}
 </style>
+<script>
+document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
+  const label = card.querySelector('.portrait > .label');
+  const name = card.querySelector('.name');
+  if (!label || !name || card.querySelector('.card-alias')) return;
+  const alias = document.createElement('span');
+  alias.className = 'card-alias';
+  alias.textContent = label.textContent;
+  name.appendChild(alias);
+});
+</script>
+
+    
 <style>
 @media(min-width:701px){#gdCharacterArchive{padding-left:4%;padding-right:4%}#gdCharacterArchive .gd-track{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(10px,1.4vw,20px);overflow:visible;scroll-snap-type:none;padding:8px 3px 22px}#gdCharacterArchive .gd-card{width:100%;min-width:0;max-width:none}#gdCharacterArchive .gd-portrait{aspect-ratio:1/3}#gdCharacterArchive .gd-card-name{font-size:clamp(11px,1.1vw,15px);padding-top:16px;letter-spacing:.04em}#gdCharacterArchive .gd-controls,#gdCharacterArchive .gd-footnote{display:none}}
 @media(max-width:700px){#gdCharacterArchive .gd-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px}#gdCharacterArchive .gd-card{flex:0 0 72%;max-width:290px}#gdCharacterArchive .gd-portrait{aspect-ratio:2/3}}
