@@ -1185,6 +1185,84 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
   color: #40312c !important;
 }
 </style>
+<style>
+/* 팝업 바깥 테두리 하나만 유지 */
+#profile {
+  padding:46px 0 0!important;
+  border:1px solid #9b7b58!important;
+  box-shadow:0 20px 70px #0009!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+}
+#profile .sheet {
+  grid-template-columns:minmax(0,2fr) minmax(0,3fr)!important;
+  border:0!important;
+  box-shadow:none!important;
+  align-items:stretch!important;
+}
+#profile .sheet:after,
+#profile .original:before,
+#profile .original:after,
+#profile .copy:after {
+  display:none!important;
+}
 
+/* 세로 원본을 작게 축소하지 않도록 */
+#profile .original {
+  margin:0!important;
+  padding:0!important;
+  height:auto!important;
+  min-height:0!important;
+  align-self:start!important;
+  background:transparent!important;
+}
+#profile .original img {
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  margin:0!important;
+  border:0!important;
+  box-shadow:none!important;
+  object-fit:contain!important;
+  transform:none!important;
+  animation:none!important;
+}
+#profile .copy {
+  padding:28px 24px!important;
+}
+#profile .tags span {
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+}
+
+/* 닫기는 사진 위쪽에 배치 */
+#profile .gd-profile-close {
+  position:sticky!important;
+  top:0!important;
+  float:right!important;
+  margin:-40px 8px 0 0!important;
+  width:34px!important;
+  height:34px!important;
+  border:0!important;
+  box-shadow:none!important;
+  z-index:100!important;
+}
+
+/* 모바일: 사진 위, 소개 아래 */
+@media(max-width:700px) {
+  #profile {
+    width:min(94vw,440px)!important;
+  }
+  #profile .sheet {
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  #profile .copy {
+    padding:24px 20px!important;
+  }
+}
+</style>
+    
     
 </body></html>
