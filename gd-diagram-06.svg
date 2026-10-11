@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" fill="none" id="paused"><style><![CDATA[.mist-art{animation:drift 16s ease-in-out infinite alternate}
+.blood-moon{animation:breathe 6s ease-in-out infinite}
+.lotus-orbit{animation:orbit 90s linear infinite}
+.floating-name{animation:rise 8s ease-in-out infinite}
+.fracture{animation:breathe 4s ease-in-out infinite}
+.slow-turn{transform-origin:300px 300px;animation:orbit 130s linear infinite}
+.flow-line{stroke-dasharray:8 5;animation:lineflow 8s linear infinite}
+.slow-turn,.flow-line{animation:none}
+.flow-line{stroke:#e84b6f!important}
+.fracture{stroke:#d32c4b!important}
+.slow-turn{animation-duration:100s}
+.lotus-orbit{animation-duration:75s}
+@keyframes drift{to{transform:translateX(50px) translateY(-8px);opacity:.5}}
+@keyframes breathe{50%{opacity:.6}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes rise{50%{transform:translateY(-22px);opacity:.3}}
+@keyframes embers{0%{transform:translateY(80px);opacity:0}20%{opacity:.7}100%{transform:translateY(-300px);opacity:0}}
+@keyframes lineflow{to{stroke-dashoffset:-104}}
+@keyframes introturn{to{transform:rotate(360deg)}}
+@keyframes sealbreathe{50%{opacity:.55}}
+@keyframes unsealflash{0%{opacity:0}28%{opacity:.7}100%{opacity:0}}
+@keyframes folio-sheen{0%,65%{left:-110px}90%,100%{left:110%}}
+@keyframes sigil-wave{0%{opacity:.9;transform:translate(-50%,-50%) scale(.25) rotate(0)}100%{opacity:0;transform:translate(-50%,-50%) scale(2.1) rotate(35deg)}}
+@keyframes gd-record-open{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
+:root:target *{animation-play-state:paused!important}@media(prefers-reduced-motion:reduce){*{animation:none!important}}]]></style><g stroke="#b0acc2" stroke-width="1"><path d="M95 90L165 35H536L606 90H95ZM115 91V220H585V91M90 221H610M78 230H622M66 239H634M184 36V18H517V36M265 35V90M435 35V90M299 220V145H401V220"/><path d="M147 113H553M147 162H553M167 90V218M225 90V218M475 90V218M533 90V218" stroke-opacity=".5"/><path d="M25 265H675M44 40V240M657 40V240M35 41H54M35 240H54M648 41H666M648 240H666" stroke-dasharray="4 5" stroke-opacity=".5"/><circle cx="350" cy="267" r="20" stroke="#cf718e"/><path d="M350 246v-27" stroke="#cf718e"/></g></svg>
