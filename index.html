@@ -1342,5 +1342,48 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
   #profile .gd-profile-close {top:16px!important;right:16px!important;}
 }
 </style>
-    
+    <style id="gd-profile-image-height">
+/* 현재 HTML 맨 아래 </body> 바로 앞에 추가하세요. */
+@media(min-width:701px) {
+  #profile .sheet {
+    display:block!important;
+    position:relative!important;
+    overflow:hidden!important;
+  }
+  #profile .original {
+    display:block!important;
+    position:relative!important;
+    width:40%!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  #profile .original img {
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    margin:0!important;
+  }
+  #profile .copy {
+    box-sizing:border-box!important;
+    position:absolute!important;
+    top:0!important;
+    right:0!important;
+    bottom:0!important;
+    left:auto!important;
+    width:60%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+    padding:28px 24px!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#9d8566 #dfd0b2;
+  }
+}
+</style>
 </body></html>
