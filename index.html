@@ -1277,5 +1277,79 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
   z-index:100!important;
 }
 </style>
-    
+    <style id="gd-profile-book-frame">
+/* 이 블록을 기존 HTML 맨 아래 </body> 바로 앞에 붙여 넣으세요. */
+#profile {
+  box-sizing:border-box!important;
+  padding:8px 10px 12px 17px!important;
+  border:4px solid #38252a!important;
+  border-radius:9px 5px 5px 9px!important;
+  background:
+    linear-gradient(90deg,#100b10 0,#5c3a3e 6px,#23151c 12px,#604044 15px,#281a22 18px,#21171e 100%)!important;
+  outline:1px solid #94714b;
+  outline-offset:-5px;
+  box-shadow:
+    0 22px 75px #000b,
+    3px 5px 0 #130d13,
+    5px 7px 0 #6d523b,
+    inset 0 1px 0 #b38e624d,
+    inset 0 -1px 0 #bd99654d!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  scrollbar-width:thin;
+  scrollbar-color:#96714f #21171e;
+}
+#profile .sheet {
+  position:relative!important;
+  margin:0!important;
+  border:0!important;
+  border-right:5px solid #cbb99a!important;
+  border-bottom:6px solid #cbb99a!important;
+  border-radius:2px!important;
+  background:#dfd0b2!important;
+  box-shadow:1px 1px 0 #69503b,2px 2px 0 #e5d5b4!important;
+}
+#profile .sheet::before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  border:1px solid #84623d55;
+  box-shadow:inset 0 2px 3px #432a1a18,inset 0 -3px 5px #432a1a26;
+  z-index:2;
+  pointer-events:none!important;
+}
+#profile .sheet::after {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  top:0!important;
+  bottom:0!important;
+  left:40%!important;
+  width:20px!important;
+  transform:translateX(-50%)!important;
+  background:linear-gradient(90deg,transparent,#26160f30 45%,#fff4d51c 53%,transparent)!important;
+  z-index:2;
+  pointer-events:none!important;
+}
+#profile .gd-profile-close {
+  top:16px!important;
+  right:19px!important;
+  margin:0!important;
+  border:1px solid #c2a16c!important;
+  border-radius:3px!important;
+  background:#2b1b23f2!important;
+  color:#f1dfbc!important;
+  box-shadow:0 3px 8px #0003!important;
+}
+@media(max-width:700px) {
+  #profile {
+    width:min(94vw,440px)!important;
+    padding:6px 8px 10px 13px!important;
+    border-width:3px!important;
+  }
+  #profile .sheet::after {display:none!important;}
+  #profile .gd-profile-close {top:12px!important;right:15px!important;}
+}
+</style>
 </body></html>
