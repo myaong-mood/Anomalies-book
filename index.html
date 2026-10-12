@@ -1468,17 +1468,17 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
 
 
 
-    <style id="gd-index-k">
-/* 코드 전체를 HTML 맨 아래 </body> 바로 앞에 추가하세요. */
+<style id="gd-index-k-slim">
+/* 기존 목차 K형 스타일 블록을 이 코드 전체로 교체하세요. */
 nav.index {
-  padding:18px 4%!important;
+  padding:8px 4%!important;
   background:#0c0b10!important;
   border:0!important;
   box-shadow:none!important;
 }
 nav.index::before,nav.index::after {display:none!important;}
 nav.index .index-label {
-  margin:0 0 10px!important;
+  margin:0 0 5px!important;
   padding:0!important;
   color:#827a84!important;
   font:9px/1.6 Arial,sans-serif!important;
@@ -1500,7 +1500,7 @@ nav.index .index-grid>a {
   position:relative!important;
   min-width:0!important;
   margin:0!important;
-  padding:17px 20px 39px!important;
+  padding:10px 14px 24px!important;
   border:0!important;
   border-right:1px solid #a497aa20!important;
   border-radius:0!important;
@@ -1514,27 +1514,27 @@ nav.index .index-grid>a {
 }
 nav.index .index-grid>a:last-child {border-right:0!important;}
 nav.index .index-grid>a>span {
-  display:block!important;
-  margin:0 0 8px!important;
+  display:inline-block!important;
+  margin:0 9px 0 0!important;
   padding:0!important;
   color:#a49aa8!important;
   font:12px/1.4 Georgia,serif!important;
 }
 nav.index .index-grid>a>b {
-  display:block!important;
+  display:inline-block!important;
   margin:0!important;
   padding:0!important;
   color:inherit!important;
-  font:500 16px/1.6 Arial,sans-serif!important;
+  font:500 14px/1.4 Arial,sans-serif!important;
   letter-spacing:0!important;
   white-space:nowrap!important;
 }
 nav.index .index-grid>a .english {
   display:block!important;
   position:absolute!important;
-  left:20px!important;
+  left:14px!important;
   right:10px!important;
-  bottom:16px!important;
+  bottom:8px!important;
   margin:0!important;
   padding:0!important;
   color:#8a808e!important;
@@ -1567,14 +1567,14 @@ nav.index .index-grid>a[aria-current="location"]::before {opacity:1!important;}
 nav.index .index-grid>a:hover {background:#71334a18!important;}
 nav.index .index-grid>a:focus-visible {outline:1px solid #ad667d;outline-offset:-3px;}
 @media(max-width:700px) {
-  nav.index {padding:12px 4%!important;}
-  nav.index .index-grid>a {padding:12px 8px 30px!important;}
-  nav.index .index-grid>a>span {font-size:10px!important;margin-bottom:6px!important;}
-  nav.index .index-grid>a>b {font-size:clamp(9px,2.6vw,13px)!important;}
+  nav.index {padding:6px 4%!important;}
+  nav.index .index-grid>a {padding:8px 6px 21px!important;}
+  nav.index .index-grid>a>span {font-size:9px!important;margin:0 4px 0 0!important;}
+  nav.index .index-grid>a>b {font-size:clamp(8px,2.2vw,11px)!important;}
   nav.index .index-grid>a .english {
-    left:8px!important;
+    left:6px!important;
     right:3px!important;
-    bottom:12px!important;
+    bottom:7px!important;
     font-size:clamp(4px,1.2vw,7px)!important;
     letter-spacing:.03em!important;
   }
