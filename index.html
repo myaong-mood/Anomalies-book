@@ -1386,4 +1386,83 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
   }
 }
 </style>
+
+
+    <style id="gd-world-brief-parchment">
+/* HTML 맨 아래 </body> 바로 앞에 추가하세요. 세계관 요약에만 적용됩니다. */
+#gdWorldBrief {
+  box-sizing:border-box!important;
+  position:relative!important;
+  width:90%!important;
+  max-width:1180px!important;
+  margin:38px auto 52px!important;
+  padding:34px 38px 38px!important;
+  border:1px solid #a38d695e!important;
+  border-radius:2px!important;
+  background:
+    radial-gradient(ellipse at 0 0,#9b754321,transparent 55%),
+    radial-gradient(ellipse at 100% 100%,#97724626,transparent 50%),
+    repeating-linear-gradient(0deg,transparent 0 3px,#78552b03 3px 4px),
+    #d9ccb3!important;
+  color:#453a32!important;
+  box-shadow:0 12px 32px #0003,inset 0 0 24px #87613e12!important;
+  text-align:left!important;
+}
+#gdWorldBrief::before,#gdWorldBrief::after {
+  content:none!important;
+  display:none!important;
+}
+#gdWorldBrief .gwb-head {
+  border-bottom:1px solid #7a624745!important;
+  padding-bottom:18px!important;
+}
+#gdWorldBrief .gwb-head::before {
+  background:#854155!important;
+  box-shadow:none!important;
+}
+#gdWorldBrief .gwb-head h2 {
+  color:#382b2c!important;
+  font-size:19px!important;
+  letter-spacing:.03em!important;
+}
+#gdWorldBrief .gwb-head span {color:#7c6856!important;}
+#gdWorldBrief .gwb-genre {color:#7a6555!important;}
+#gdWorldBrief .gwb-intro {
+  color:#704151!important;
+  border-left-color:#975466!important;
+  background:transparent!important;
+  margin:20px 0 8px!important;
+}
+#gdWorldBrief .gwb-entry {
+  border-bottom:1px solid #80654829!important;
+  background:transparent!important;
+  padding:24px 0!important;
+}
+#gdWorldBrief .gwb-title small {color:#8b4b5b!important;}
+#gdWorldBrief .gwb-title h3 {color:#473136!important;}
+#gdWorldBrief .gwb-title p {color:#806c58!important;}
+#gdWorldBrief .gwb-copy,#gdWorldBrief .gwb-copy p {
+  color:#493d33!important;
+}
+#gdWorldBrief .gwb-copy .gwb-notice {
+  color:#633e49!important;
+  border-left:2px solid #975466!important;
+  background:#8644540a!important;
+}
+#gdWorldBrief .gwb-end {
+  color:#754151!important;
+  border-left-color:#975466!important;
+  margin-top:24px!important;
+}
+@media(max-width:700px) {
+  #gdWorldBrief {
+    margin:28px auto 38px!important;
+    padding:25px 21px 28px!important;
+  }
+  #gdWorldBrief .gwb-head {flex-wrap:wrap!important;gap:8px!important;}
+  #gdWorldBrief .gwb-head h2 {font-size:17px!important;}
+  #gdWorldBrief .gwb-head span {font-size:8px!important;}
+  #gdWorldBrief .gwb-entry {padding:20px 0!important;}
+}
+</style>
 </body></html>
