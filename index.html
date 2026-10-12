@@ -1279,19 +1279,32 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
 </style>
 
 
-<style id="gd-profile-book-frame-clean">
-/* 이전 고서테두리 블록 대신 사용하세요. 맨 아래 </body> 바로 앞에 넣습니다. */
+<style id="gd-profile-decorated-book">
+/* 앞서 준 고서테두리 스타일 대신, </body> 바로 앞에 넣으세요. */
 #profile {
-  padding:5px 5px 9px 9px!important;
-  border:1px solid #72554a!important;
-  border-radius:5px!important;
+  box-sizing:border-box!important;
+  padding:12px 12px 16px 24px!important;
+  border:2px solid #8c6b46!important;
+  border-radius:7px 4px 4px 7px!important;
   outline:0!important;
-  background:#281d22!important;
-  box-shadow:0 18px 60px #0008!important;
+  background:
+    linear-gradient(#c9aa72,#c9aa72) 7px 7px/26px 2px no-repeat,
+    linear-gradient(#c9aa72,#c9aa72) 7px 7px/2px 26px no-repeat,
+    linear-gradient(#c9aa72,#c9aa72) calc(100% - 7px) 7px/26px 2px no-repeat,
+    linear-gradient(#c9aa72,#c9aa72) calc(100% - 7px) 7px/2px 26px no-repeat,
+    linear-gradient(#c9aa72,#c9aa72) 7px calc(100% - 7px)/26px 2px no-repeat,
+    linear-gradient(#c9aa72,#c9aa72) 7px calc(100% - 7px)/2px 26px no-repeat,
+    linear-gradient(#c9aa72,#c9aa72) calc(100% - 7px) calc(100% - 7px)/26px 2px no-repeat,
+    linear-gradient(#c9aa72,#c9aa72) calc(100% - 7px) calc(100% - 7px)/2px 26px no-repeat,
+    linear-gradient(#a48155,#a48155) 4px 25%/16px 3px no-repeat,
+    linear-gradient(#a48155,#a48155) 4px 50%/16px 3px no-repeat,
+    linear-gradient(#a48155,#a48155) 4px 75%/16px 3px no-repeat,
+    linear-gradient(90deg,#130d13 0,#493039 8px,#21151b 18px,#684731 20px,#2a1b23 22px,#23191f 24px)!important;
+  box-shadow:0 20px 65px #0009,inset 0 0 0 3px #120d1390!important;
   overflow-y:auto!important;
   overflow-x:hidden!important;
   scrollbar-width:thin;
-  scrollbar-color:#806755 #281d22;
+  scrollbar-color:#94714e #23191f;
 }
 #profile::before,#profile::after {
   content:none!important;
@@ -1301,30 +1314,32 @@ document.querySelectorAll('#gdCharacterArchive .card').forEach(card => {
   position:relative!important;
   margin:0!important;
   border:0!important;
+  border-right:4px double #b3a080!important;
+  border-bottom:5px double #b3a080!important;
   border-radius:1px!important;
   background:#dfd0b2!important;
-  box-shadow:0 2px 0 #c5b69a,0 3px 0 #8e7c62,0 5px 0 #d8c9ac!important;
+  box-shadow:1px 2px 0 #e5d5b5,2px 4px 0 #7d6548!important;
 }
 #profile .sheet::before,#profile .sheet::after {
   content:none!important;
   display:none!important;
 }
 #profile .gd-profile-close {
-  top:13px!important;
-  right:13px!important;
+  top:19px!important;
+  right:19px!important;
   margin:0!important;
-  border:0!important;
+  border:1px solid #b89966!important;
   border-radius:2px!important;
-  background:#281d22e8!important;
-  color:#e8dbc5!important;
+  background:#281b23f2!important;
+  color:#ead7b4!important;
   box-shadow:none!important;
 }
 @media(max-width:700px) {
   #profile {
     width:min(94vw,440px)!important;
-    padding:4px 4px 8px 7px!important;
+    padding:10px 10px 14px 22px!important;
   }
-  #profile .gd-profile-close {top:11px!important;right:11px!important;}
+  #profile .gd-profile-close {top:16px!important;right:16px!important;}
 }
 </style>
     
